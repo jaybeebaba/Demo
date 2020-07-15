@@ -9,6 +9,8 @@ app.get("/", (req,res)=>{
     res.render("./app")
 })
 
-app.listen(5000, ()=>{
-    console.log("App started at port 5000")
+var PORT = process.env.PORT || 5000
+
+app.listen(PORT, ()=>{
+    console.log(`App started on port ${PORT}`)
 })
